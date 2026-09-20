@@ -1,0 +1,57 @@
+[
+{
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+        "name": "Фрукты",
+        "description": "Свежие"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Овощи",
+        "description": "С огорода"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "Яблоки",
+        "description": "Яблоня Черный бриллиант",
+        "picture": "",
+        "category": 1,
+        "price": 350,
+        "created_at": "2026-09-20T07:54:51.357Z",
+        "updated_at": "2026-09-20T07:54:51.357Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "Картофель",
+        "description": "Вителот",
+        "picture": "",
+        "category": 2,
+        "price": 425,
+        "created_at": "2026-09-20T08:00:17.438Z",
+        "updated_at": "2026-09-20T08:00:17.438Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Капуста",
+        "description": "Капуста белокочанная Скороспелая Уральский дачник",
+        "picture": "",
+        "category": 2,
+        "price": 164,
+        "created_at": "2026-09-20T08:01:57.157Z",
+        "updated_at": "2026-09-20T08:01:57.157Z"
+    }
+}
+]
