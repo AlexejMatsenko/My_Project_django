@@ -3,55 +3,94 @@
     "model": "catalog.category",
     "pk": 1,
     "fields": {
-        "name": "Фрукты",
-        "description": "Свежие"
+        "name": "Автомобили",
+        "description": ""
     }
 },
 {
     "model": "catalog.category",
     "pk": 2,
     "fields": {
-        "name": "Овощи",
-        "description": "С огорода"
+        "name": "Мотоциклы",
+        "description": ""
     }
 },
 {
     "model": "catalog.product",
     "pk": 1,
     "fields": {
-        "name": "Яблоки",
-        "description": "Яблоня Черный бриллиант",
-        "picture": "",
+        "name": "Lada Vesta",
+        "description": "Семейство российских автомобилей среднего класса, выпускаемых АвтоВАЗом. Заменило в модельной линейке семейство Lada Priora.",
+        "picture": "images/Lada_Vesta.png",
         "category": 1,
-        "price": 350,
-        "created_at": "2026-09-20T07:54:51.357Z",
-        "updated_at": "2026-09-20T07:54:51.357Z"
+        "price": 1500000,
+        "created_at": "2026-09-24T10:42:06.989Z",
+        "updated_at": "2026-09-24T10:42:21.996Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Нива",
+        "description": "Советский и российский внедорожник малого класса повышенной проходимости с несущим кузовом и постоянным полным приводом. Серийно производится с 5 апреля 1977 года.",
+        "picture": "images/Niva.png",
+        "category": 1,
+        "price": 165000,
+        "created_at": "2026-09-24T10:45:19.251Z",
+        "updated_at": "2026-09-24T10:45:19.251Z"
     }
 },
 {
     "model": "catalog.product",
     "pk": 3,
     "fields": {
-        "name": "Картофель",
-        "description": "Вителот",
-        "picture": "",
-        "category": 2,
-        "price": 425,
-        "created_at": "2026-09-20T08:00:17.438Z",
-        "updated_at": "2026-09-20T08:00:17.438Z"
+        "name": "Буханка",
+        "description": "Семейство полноприводных микроавтобусов и малотоннажных грузопассажирских автомобилей повышенной проходимости",
+        "picture": "images/Буханка.png",
+        "category": 1,
+        "price": 140000,
+        "created_at": "2026-09-24T10:48:05.081Z",
+        "updated_at": "2026-09-24T10:48:05.081Z"
     }
 },
 {
     "model": "catalog.product",
     "pk": 4,
     "fields": {
-        "name": "Капуста",
-        "description": "Капуста белокочанная Скороспелая Уральский дачник",
-        "picture": "",
+        "name": "Планета-5",
+        "description": "Дорожный мотоцикл среднего класса, выпускавшийся Ижевским машиностроительным заводом с 1987 по 2008 год.",
+        "picture": "images/Planeta_5.png",
         "category": 2,
-        "price": 164,
-        "created_at": "2026-09-20T08:01:57.157Z",
-        "updated_at": "2026-09-20T08:01:57.157Z"
+        "price": 100000,
+        "created_at": "2026-09-24T10:51:47.621Z",
+        "updated_at": "2026-09-24T10:51:47.621Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Восход",
+        "description": "Марка советских дорожных мотоциклов, которые выпускались на Заводе имени Дегтярёва (ЗиД) в Коврове с 1965 по 2002 год.",
+        "picture": "images/voshod.png",
+        "category": 2,
+        "price": 7500,
+        "created_at": "2026-09-24T10:54:33.778Z",
+        "updated_at": "2026-09-24T10:54:33.778Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Yamaha",
+        "description": "Флагманский спортбайк компании Yamaha, созданный для трековых заездов и динамичной городской езды. Сочетает высокую мощность, передовые технологии и выдающуюся управляемость, считается одним из самых популярных супербайков в мире.",
+        "picture": "images/Yamaha.png",
+        "category": 2,
+        "price": 2500000,
+        "created_at": "2026-09-24T10:59:32.042Z",
+        "updated_at": "2026-09-24T10:59:32.042Z"
     }
 }
 ]

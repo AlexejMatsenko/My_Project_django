@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Продукты</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Продукты</h1>
+
+        <ul class="list-group">
+
+            {% for product in products %}
+
+                <li class="list-group-item">
+                    {{ product.name }} - {{ product.price }} - {{ product.created_at|date:"d M Y H:i" }}
+                    <img src="{{ product.picture.url }}" alt="image" class="img-thumbnail" width="400"
+                    height="300"
+                    sizes="auto">
+<!--                    (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"-->
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script type="text/javascript" src="/static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
