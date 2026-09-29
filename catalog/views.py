@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Product
+from .models import Product, Category
 
 
-def home(request):
-    return render(request, "home.html")
+def base(request):
+    return render(request, "base.html")
+
 
 
 def contacts(request):
@@ -17,10 +18,26 @@ def contacts(request):
         )
     return render(request, "contacts.html")
 
-def base(request):
-    products = Product.objects.all()
-    context = {
-        "products": products
-    }
-    return render(request, "base.html", context)
 
+def avto_detail(request):
+    categori_1 = Category.objects.get(id=1)
+    products_avto = Product.objects.filter(category=categori_1)
+    context = {
+        "products_avto": products_avto
+
+    }
+    return render(request, "avto_detail.html", context)
+
+def moto_detail(request):
+    categori_2 = Category.objects.get(id=2)
+    products_moto = Product.objects.filter(category=categori_2)
+    context = {
+        "products_moto": products_moto
+
+    }
+    return render(request, "moto_detail.html", context)
+
+def product_detail(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    context = {"product": product}
+    return render(request, "product_detail.html", context)
