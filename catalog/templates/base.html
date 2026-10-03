@@ -21,18 +21,20 @@
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'catalog:base' %}">Главная</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'catalog:main' %}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Контакты</a>
+                    <a class="nav-link" href="{% url 'catalog:contacts' %}">Контакты</a>
                 </li>
                  <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Категории
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'catalog:avto_detail' %}">Автомобили</a></li>
-                        <li><a class="dropdown-item" href="{% url 'catalog:moto_detail' %}">Мотоциклы</a></li>
+                        <li><a class="dropdown-item" href="{% url 'catalog:product_list' %}">Все товары</a></li>
+                        {% for category in categories %}
+                            <li><a class="dropdown-item" href="#">{{ category.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
             </ul>
@@ -48,34 +50,13 @@
 
  <div class="row g-4">
      {% block content %}
-        <h1 class="text-center">Вы находитесь на главной странице!</h1>
-        <h2 class="text-center"> На нашем сайте вы найдёте уникальную технику! Выберите интересующую Вас категорию.</h2>
-        <!-- Карточка категории Автомобили -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column text-center">
-                    <h5 class="card-title">Автомобили</h5>
-                    <p class="card-text flex-grow-1">У нас вы найдёте лучшие автомобили,как российского чермета,так и зарубежного!</p>
-                    <a href="/avto_detail/" class="btn btn-primary mt-3 align-self-center">Перейти</a>
-                </div>
-            </div>
-        </div>
 
-        <!-- Карточка категории Мотоциклы -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column text-center">
-                    <h5 class="card-title">Мотоциклы</h5>
-                    <p class="card-text flex-grow-1">Для бессмертных мы подобрали лучшие мотоциклы как современные,так и с прошлых веков!</p>
-                    <a href="/moto_detail/" class="btn btn-primary mt-3 align-self-center">Перейти</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endblock %}
+     {% endblock %}
+ </div>
+
     <!-- Футер -->
     <footer class="fixed-bottom bg-dark text-white py-3">
-        <div class="container"> <p class="text-center mb-0">&copy; 2026 Магазин. Все права защищены.</p>
+        <div class="container"> <p class="text-center mb-0">&copy; 2026 Магазин техники. Все права защищены.</p>
         </div>
     </footer>
 </div>
